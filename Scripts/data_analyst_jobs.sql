@@ -80,4 +80,25 @@ GROUP BY company, star_rating, review_count
 HAVING (review_count) > 5000
 ORDER BY AVG(star_rating) DESC
 
+/*
+11.	Find all the job titles that contain the word ‘Analyst’. 
+How many different job titles are there?
+*/
+SELECT title
+FROM data_analyst_jobs
+WHERE title LIKE '%Analyst%'
+		OR title LIKE '%analyst%'
+		OR title LIKE '%ANALYST%'
+		OR title LIKE '%Analytics%'
+		OR title LIKE '%ANALYTICS%'
+		OR title LIKE '%analytics%'
+	
+SELECT COUNT (DISTINCT title)
+FROM data_analyst_jobs
+WHERE title LIKE ‘%Analyst%’
+OR title LIKE '%analyst%'
+		OR title LIKE '%ANALYST%'
+		OR title LIKE '%Analytics%'
+		OR title LIKE '%ANALYTICS%'
+		OR title LIKE '%analytics%'
 
