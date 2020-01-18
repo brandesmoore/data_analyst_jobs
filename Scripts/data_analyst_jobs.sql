@@ -1,3 +1,4 @@
+
 /*
 1. How many rows in the table
 */
@@ -101,4 +102,13 @@ OR title LIKE '%analyst%'
 		OR title LIKE '%Analytics%'
 		OR title LIKE '%ANALYTICS%'
 		OR title LIKE '%analytics%'
+/*
+12.	How many different job titles do not contain either the word ‘Analyst’ 
+or the word ‘Analytics’? What word do these positions have in common?
+*/
+SELECT COUNT (DISTINCT title)
+FROM data_analyst_jobs
+WHERE title NOT ILIKE '%Analytics%'
+	AND title NOT ILIKE '%Analyst%'
+
 
