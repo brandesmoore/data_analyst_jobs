@@ -30,6 +30,7 @@ SELECT COUNT(title)
 FROM data_analyst_jobs
 WHERE star_rating > 4
 AND location = ‘TN’
+<<<<<<< HEAD
 
 /*5.	How many postings in the dataset have a review count between 500 and 1000?
 */
@@ -47,6 +48,8 @@ WHERE star_rating IS NOT NULL
 	AND location NOT LIKE 'REMOTE'
 GROUP BY location
 ORDER BY avg_rating DESC
+=======
+>>>>>>> b8bd675... Question 3 is complete.
 
 /*7.	Select unique job titles from the data_analyst_jobs table. How many are there?
 */
